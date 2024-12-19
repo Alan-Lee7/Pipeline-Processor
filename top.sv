@@ -39,7 +39,6 @@ endmodule
 ///// End Testbench                                   /////
 ///////////////////////////////////////////////////////////
 
-
 module top(input logic clk, reset,
 	output logic [31:0] WriteDataM, DataAdrM,
 	output logic MemWriteM);
@@ -483,12 +482,12 @@ module alu(input  logic [31:0] a, b,
       4'b0000:  result = sum;                // add
       4'b0001:  result = sum;                // subtract
       4'b0010:  result = a & b;              // and
-      4'b0011:  result = a | b;       			// or
-      4'b0100:  result = a ^ b;       			// xor
-      4'b0101:  result = (a < b) ? 1:0;		// slt
-      4'b0110:  result = a << b;         		// sll
-      4'b0111:  result = a >> b;        		// srl
-		4'b1000:  result = a >>> b[4:0];			// sra
+      4'b0011:  result = a | b;       	     // or
+      4'b0100:  result = a ^ b;       	     // xor
+      4'b0101:  result = (a < b) ? 1:0;	     //slt
+      4'b0110:  result = a << b;             // sll
+      4'b0111:  result = a >> b;             // srl
+      4'b1000:  result = a >>> b[4:0];       // sra
       default:  result = 32'b0;
     endcase
 
